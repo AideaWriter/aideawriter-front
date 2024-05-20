@@ -108,8 +108,8 @@ const ProjectsList = ({ data }) => {
 
         <ul className="articles-list">
             {
-                projects?.map(project => (
-                    <li>
+                projects?.map((project, i) => (
+                    <li key={i}>
                         {popUpUpdate !== project.uid ? <Link href={`/projects/${project.uid}`}>
                             <h4>{project.name}</h4>
                         </Link> : <UpdateProjectName name={project.name} uid={project.uid} childData={handleUpdateName} />}

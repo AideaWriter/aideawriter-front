@@ -2,7 +2,6 @@
 
 import {Plus_Jakarta_Sans} from 'next/font/google';
 import './style.css';
-import Providers from '@/app/components/Providers';
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/navigation';
 import {getUser} from '../lib/authenticated';
@@ -46,11 +45,7 @@ export default function DashboardLayout({
     return (
         <html lang="en">
         <body className={`${inter.className}`}>
-        <Providers>
-
                     {children}
-
-        </Providers>
         </body>
         </html>
     )

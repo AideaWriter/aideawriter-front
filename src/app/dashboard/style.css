@@ -73,10 +73,11 @@ a{
 
 
 a:hover {
-    background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);*/
+    /*background-clip: text;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #b6f09c;
 }
 
 
@@ -750,7 +751,7 @@ input:checked + .slider:before {
     border-radius: 13px;
     border: 1px solid #fff;
     max-height: 58vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 

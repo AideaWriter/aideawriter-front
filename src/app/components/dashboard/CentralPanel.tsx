@@ -98,7 +98,7 @@ const CentralPanel = () =>{
                     <h3>Articles</h3>
                 </li>
                 <li>
-                    <h2>{tokenTracker && tokenTracker.token}</h2>
+                    <h2>{tokenTracker === null ? 0 : tokenTracker.token}</h2>
                     <h3>Articles Point</h3>
                 </li>
             </ul>
