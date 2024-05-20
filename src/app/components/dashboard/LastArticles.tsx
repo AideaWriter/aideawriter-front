@@ -33,8 +33,8 @@ const LastArticles = () =>{
     return <div className={'last-articles-block'}>
         <span>Last Articles</span>
         <ul>
-            {articles && articles.map((article) => (
-                <li className={'article-block'}>
+            {articles && articles.map((article, i) => (
+                <li key={i} className={'article-block'}>
                     <Link className={'link-articles-block'} href={`/articles/${article.uid}`}>
                         <h3>{article.theme}</h3>
                         <p>{article.text.blocks[1].data.text.slice(0, 100)} ...</p>

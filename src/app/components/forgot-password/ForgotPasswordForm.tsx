@@ -62,7 +62,7 @@ const ForgotPasswordFormSendEmail  = () => {
 
     return <div className={'sign-in-form'}>
         <h2>Reset Your Password</h2>
-        <p>We'll send you an email to reset your password.</p>
+        <p>We&apos;ll send you an email to reset your password.</p>
         <form onSubmit={handleSubmit} className={'form-signin'}>
             {error.statusCode == 404 ? (<span style={{color: 'red', marginLeft: 10, marginBottom: 10}}>User not found</span>) : ""}
             <label className={'libel-signin'}>

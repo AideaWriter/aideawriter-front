@@ -62,7 +62,7 @@ const CentralPanel = () =>{
                     </li>
                     <li className={'item-platform'}>
 
-                        <p>2. Go to the "Create New Articles" tab</p>
+                        <p>2. Go to the &quot;Create New Articles&quot; tab</p>
 
                     </li>
                     <li className={'item-platform'}>

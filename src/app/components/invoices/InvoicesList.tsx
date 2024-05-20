@@ -62,9 +62,8 @@ const InvoicesList = () => {
     return <div className="articles-list-block">
         <ul className="articles-list">
             {
-                invoice?.map(invoice => (
-                    <li>
-                        {console.log(invoice)}
+                invoice?.map((invoice, i) => (
+                    <li key={i}>
 
                         <h4 className={'sub-name'}>{invoice.account_name}</h4>
                         <h4>{ formatNumber(invoice.amount_paid)}</h4>

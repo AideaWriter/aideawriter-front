@@ -80,7 +80,7 @@ const SignInForm = () => {
     );
 
     return <div className={'sign-in-form'}>
-        <h2>Let's get <span>creative!</span></h2>
+        <h2>Let&apos;s get <span>creative!</span></h2>
         <p>Log in to Artificium to start creating magic.</p>
         {/*<div className="links-logon-block">*/}
         {/*    <Link href={'#'}>*/}

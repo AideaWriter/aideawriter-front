@@ -9,8 +9,8 @@ const SelectOrCreateProjectForm = ({ onNext, projects,  selectedOption, handleCh
                 <label className={'libel-signin'}>
                     <span className={'icon-project'}></span>
                     <select value={selectedOption} onChange={handleChange} className={'select-style project-select'} name="projects" id="projects">
-                        {projects && projects.map((item)=>(
-                            <option value={item.uid}>{item.name}</option>
+                        {projects && projects.map((item, i)=>(
+                            <option key={i} value={item.uid}>{item.name}</option>
                         ))}
                     </select>
                 </label>

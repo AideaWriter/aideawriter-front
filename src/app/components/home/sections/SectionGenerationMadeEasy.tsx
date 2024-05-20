@@ -4,7 +4,7 @@ const SectionGenerationMadeEasy = () => {
     return <section className={`site-section-generation-made-easy`}>
         <div className={`site-container`}>
             <h2 className={`site-section-generation-made-easy-title`}>Content generation made easy</h2>
-            <p className={`site-section-generation-made-easy-paragraph`}>Give our AI a few descriptions and we'll automatically create blog articles, product descriptions and more for you within just few second.</p>
+            <p className={`site-section-generation-made-easy-paragraph`}>Give our AI a few descriptions and we&apos;ll automatically create blog articles, product descriptions and more for you within just few second.</p>
             <ul className={`site-section-generation-made-easy-row`}>
                 <li>
                     <h3>Trustworthy Research</h3>

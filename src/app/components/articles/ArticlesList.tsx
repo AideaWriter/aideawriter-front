@@ -88,8 +88,8 @@ const ArticlesList = () => {
     return <div className="articles-list-block">
         <ul className="articles-list">
             {
-                articles?.map(article => (
-                    <li>
+                articles?.map((article, i) => (
+                    <li key={i}>
                         <Link href={`/articles/${article.uid}`}>
                             <h4>{article.theme}</h4>
                         </Link>
