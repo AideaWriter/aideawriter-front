@@ -88,7 +88,7 @@ export async function POST(request: Request){
     }catch (e){
         return NextResponse.json(
             {
-                message: e.message,
+                message: 'Generate failed',
             },
             {
                 status: 400,
