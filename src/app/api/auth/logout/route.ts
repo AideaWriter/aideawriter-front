@@ -12,7 +12,7 @@ export async function POST(){
     }catch (error) {
         return NextResponse.json(
             {
-                message: error.message,
+                message: 'Log Out Failed',
             },
             {
                 status: 400,

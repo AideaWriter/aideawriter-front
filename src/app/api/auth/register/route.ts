@@ -19,12 +19,11 @@ export async function POST(request: Request){
         })
 
         const user = await res.json()
-        console.log(user.message);
         if (user.statusCode === 400){
 
                 return NextResponse.json(
                     {
-                        message: user.message
+                        message: 'Registration Failed'
                     },
                     {
                         status: 400,
