@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
     const seralized = serialize(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`, user.token, {
         httpOnly: true,
-        secure: "production",
+        secure: true,
         sameSite: "strict",
         maxAge: MAX_AGE,
         path: "/",
