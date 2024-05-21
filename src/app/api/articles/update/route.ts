@@ -4,9 +4,8 @@ import {cookies} from 'next/headers';
 
 export async function PATCH(request: Request){
     const cookieStore = cookies();
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
-    console.log(body);
     try {
         const {
             uid,
@@ -28,7 +27,7 @@ export async function PATCH(request: Request){
         console.log();
         return NextResponse.json(
             {
-                message: e.message,
+                message: 'Failed to update',
             },
             {
                 status: 400,

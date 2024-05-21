@@ -5,7 +5,7 @@ import {NextResponse} from 'next/server';
 
 export async function PATCH(request: Request) {
     const cookieStore = cookies();
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
 
     try {
@@ -26,7 +26,7 @@ export async function PATCH(request: Request) {
         console.log();
         return NextResponse.json(
             {
-                message: e.message,
+                message: 'Update Project Failed',
             },
             {
                 status: 400,

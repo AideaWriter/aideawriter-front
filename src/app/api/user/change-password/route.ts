@@ -4,10 +4,15 @@ import {NextResponse} from 'next/server';
 
 
 export async function PATCH(request: Request) {
+    interface JwtPayload {
+        uid: string;
+        name?: string;
+        email: string;
+    }
     const body = await request.json();
     try {
         const {token, password} = body
-        const decoded = jwtDecode(token);
+        const decoded = jwtDecode<JwtPayload>(token);
 
 
 
@@ -28,7 +33,7 @@ export async function PATCH(request: Request) {
         console.log();
         return NextResponse.json(
             {
-                message: e.message,
+                message: 'Change Password Failed',
             },
             {
                 status: 400,

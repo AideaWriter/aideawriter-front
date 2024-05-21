@@ -4,10 +4,9 @@ import axios from 'axios';
 
 export async function GET(request: Request){
     const cookieStore = cookies();
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const url = new URL(request.url);
     const uid = url.searchParams.get('uid');
-    console.log(uid);
     try {
 
         const req = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${uid}`, {
@@ -16,7 +15,6 @@ export async function GET(request: Request){
             }
         })
         const { data } = await req
-        console.log(data);
         if (data.type !== "Right"){
             return NextResponse.json(
                 {

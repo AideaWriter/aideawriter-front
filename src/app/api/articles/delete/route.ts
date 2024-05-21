@@ -4,7 +4,7 @@ import {NextResponse} from 'next/server';
 
 export async function DELETE (request: Request){
     const cookieStore = cookies();
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
 
     try {

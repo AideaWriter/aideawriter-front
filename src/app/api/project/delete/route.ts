@@ -4,12 +4,11 @@ import {NextResponse} from 'next/server';
 
 export async function DELETE (request: Request){
     const cookieStore = cookies();
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
 
     try {
         const { uid } = body
-        console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/project/${uid}`);
         const result = axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${uid}`, {
             headers: {
                 "Content-Type": "application/json",
@@ -17,7 +16,6 @@ export async function DELETE (request: Request){
             }
         })
         const { data } = await result
-        console.log(body);
         return new Response(JSON.stringify({ success: true}), {
             status: 200,
         });
@@ -25,7 +23,7 @@ export async function DELETE (request: Request){
     }catch (error) {
         return NextResponse.json(
             {
-                message: error.message,
+                message: 'Delete Project Failed',
             },
             {
                 status: 400,

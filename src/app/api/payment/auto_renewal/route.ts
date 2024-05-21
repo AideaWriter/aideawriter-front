@@ -5,14 +5,30 @@ import {jwtDecode} from 'jwt-decode';
 
 
 export async function POST(request: Request){
+
+    interface JwtPayload {
+        uid: string;
+        name?: string;
+        email: string;
+    }
     const cookieStore = cookies();
     const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
     try {
+        if (!token) {
+            return NextResponse.json(
+                {
+                    message: "Cookie is undefined or has no value",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
 
         const {value} = token
-        const decoded = jwtDecode(value, secret as any);
+        const decoded = jwtDecode<JwtPayload>(value, secret as any);
 
         const {
             cancel_at_period_end
@@ -38,7 +54,7 @@ export async function POST(request: Request){
     }catch (e){
         return NextResponse.json(
             {
-                message: e.message,
+                message: 'Auto Renewal Failed',
             },
             {
                 status: 400,

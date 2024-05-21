@@ -297,7 +297,7 @@ a img{
 }
 
 .last-articles-block ul{
-    overflow: scroll;
+    overflow: auto;
     height: 100%;
 }
 

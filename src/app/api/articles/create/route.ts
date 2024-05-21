@@ -4,15 +4,30 @@ import {NextResponse} from 'next/server';
 import {jwtDecode} from 'jwt-decode';
 
 export async function POST (request: Request){
+    interface JwtPayload {
+        uid: string;
+        name?: string;
+        email: string;
+    }
+
     const cookieStore = cookies();
     const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json()
-    console.log(body);
     try {
+        if (!token) {
+            return NextResponse.json(
+                {
+                    message: "Cookie is undefined or has no value",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
 
         const {value} = token
-        const decoded = jwtDecode(value, secret as any);
+        const decoded = jwtDecode<JwtPayload>(value, secret as any);
         const {
             model,
             words,
@@ -57,7 +72,7 @@ export async function POST (request: Request){
     }catch (error) {
         return NextResponse.json(
             {
-                message: error.message,
+                message: 'Create Article Failed',
             },
             {
                 status: 400,
