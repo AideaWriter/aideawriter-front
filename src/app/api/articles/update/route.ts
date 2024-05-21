@@ -7,6 +7,18 @@ export async function PATCH(request: Request){
     const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
     const body = await request.json();
     try {
+        if (!token) {
+            return NextResponse.json(
+                {
+                    message: "Cookie is undefined or has no value",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
+
+        const {value} = token
         const {
             uid,
             text,
@@ -16,7 +28,7 @@ export async function PATCH(request: Request){
         }, {
             headers: {
                 "Content-Type": "application/json",
-                'Authorization': `Bearer ${token.value}`
+                'Authorization': `Bearer ${value}`
             }
         })
 

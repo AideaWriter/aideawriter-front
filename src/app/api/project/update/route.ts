@@ -9,13 +9,25 @@ export async function PATCH(request: Request) {
     const body = await request.json();
 
     try {
+        if (!token) {
+            return NextResponse.json(
+                {
+                    message: "Cookie is undefined or has no value",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
+
+        const {value} = token
        const { uid, name } = body
         const req = await axios.patch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${uid}`, {
             name,
         }, {
             headers: {
                 "Content-Type": "application/json",
-                'Authorization': `Bearer ${token.value}`
+                'Authorization': `Bearer ${value}`
             }
         })
 

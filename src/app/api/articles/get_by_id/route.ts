@@ -10,9 +10,21 @@ export async function GET(request: Request){
     const uid = url.searchParams.get('uid');
 
     try {
+        if (!token) {
+            return NextResponse.json(
+                {
+                    message: "Cookie is undefined or has no value",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
+
+        const {value} = token
         const req = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/articles/${uid}`, {
             headers: {
-                'Authorization': `Bearer ${token.value}`
+                'Authorization': `Bearer ${value}`
             }
         });
 
