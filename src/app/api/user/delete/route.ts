@@ -35,7 +35,7 @@ export async function DELETE (){
                 'Authorization': `Bearer ${token.value}`
             }
         })
-        cookieStore.delete(process.env.NEXT_PUBLIC_COOKIE_NAME)
+        cookieStore.delete(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`)
         return new Response(JSON.stringify({ success: true}), {
             status: 200,
         });
