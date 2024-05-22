@@ -18,7 +18,7 @@ const ProjectsList = ({ data }) => {
     const [reloadTrigger, setReloadTrigger] = useState(false);
     const [popUpUpdate, setPopUpUpdate] = useState(null)
     const [nameForm, setNameForm] = useState(null)
-    const [dataUpdate, setDataUpdate] = useState()
+    const [dataUpdate, setDataUpdate] = useState<any | null>()
 
     const totalPages = Math.ceil(totalProjects / take);
     const handlePopUpDelete = (uid) => {
