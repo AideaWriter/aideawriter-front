@@ -12,6 +12,9 @@ interface ErrorType {
     email?: {
         isEmail: string;
     };
+    password?: {
+        message: string;
+    };
     // добавьте другие возможные поля ошибок, если они существуют
 }
 
