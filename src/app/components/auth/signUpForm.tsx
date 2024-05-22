@@ -8,13 +8,19 @@ interface ErrorState {
     statusCode: number | null;
     message: string;
 }
+interface ErrorType {
+    email?: {
+        isEmail: string;
+    };
+    // добавьте другие возможные поля ошибок, если они существуют
+}
 
 const SignInForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const [error, setError] = useState({});
+    const [error, setError] = useState<ErrorType>({});
 
     const { push } = useRouter()
     // const [errorEmail, setErrorEmail] = useState<ErrorState>({
