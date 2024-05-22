@@ -12,7 +12,7 @@ const ArticleEditorUpdate = ({ dataSetting, onChildData }) => {
 
 
 
-    const ejInstance = useRef<EditorJS | null>();
+    const ejInstance = useRef<any>();
     // dataSetting
 
     // console.log(dataSetting );
