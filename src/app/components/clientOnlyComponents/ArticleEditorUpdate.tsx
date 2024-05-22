@@ -7,16 +7,12 @@ import Header from '@editorjs/header';
 import List from '@editorjs/list';
 import LinkTool from '@editorjs/link';
 
-interface EjInstanceType {
-    clear: () => Promise<void>;
-    render: (text: string) => Promise<void>;
-    // добавьте другие методы и свойства, если они существуют
-}
+
 const ArticleEditorUpdate = ({ dataSetting, onChildData }) => {
 
 
 
-    const ejInstance = useRef<EjInstanceType | null>();
+    const ejInstance = useRef<EditorJS | null>();
     // dataSetting
 
     // console.log(dataSetting );
