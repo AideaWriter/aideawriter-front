@@ -2,10 +2,14 @@
 
 import ArticlesListByProject from '@/app/components/projects/ArticlesListByProject';
 import HeadingsTable from '@/app/components/articles/HeadingsTable';
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-const TablesWithArticlesByProject = ({ projectId }) => {
+interface TablesWithArticlesByProjectProps {
+    projectId: any;
+}
+
+const TablesWithArticlesByProject: React.FC<TablesWithArticlesByProjectProps> = ({ projectId }) => {
 
 const [nameProject, setNameProject] = useState({})
 

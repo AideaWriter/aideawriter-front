@@ -1,11 +1,16 @@
 'use client';
 
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import SettingSavedArticle from '@/app/components/articles/SettingSavedArticle';
 import ArticlePanelForUpdate from '@/app/components/articles/ArticlePanelForUpdate';
 
-const ArticleAndSettings = ({ id }) =>{
+interface ArticleAndSettingsProps {
+    id: any;
+}
+
+
+const ArticleAndSettings: React.FC<ArticleAndSettingsProps> = ({ id }) =>{
     const [dataArticle, setDataArticle] = useState({})
     const [returnText, setReturnText] = useState({})
 
