@@ -9,7 +9,7 @@ import LinkTool from '@editorjs/link';
 
 
 const EditorComponent = ({ dataSetting }) => {
-    const ejInstance = useRef();
+    const ejInstance = useRef<EditorJS | null>();
      // dataSetting
 
 
@@ -38,7 +38,9 @@ const EditorComponent = ({ dataSetting }) => {
         const editor = new EditorJS({
             holder: 'editorjs',
             onReady: () => {
-                ejInstance.current = editor;
+                if (ejInstance.current !== undefined){
+                    ejInstance.current = editor;
+                }
                 if (dataSetting && dataSetting.text) {
                     ejInstance.current.render(dataSetting.text).catch(e => {
                         console.error("Ошибка при рендеринге:", e);
