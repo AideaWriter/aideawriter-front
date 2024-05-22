@@ -8,7 +8,7 @@ import Settings from '@/app/components/settings/Settings';
 import Image from 'next/image';
 import UserEdit from '../../images/user-edit.svg';
 
-const UserBar = ({trigger }) => {
+const UserBar = ({trigger }: {trigger?: any}) => {
     const [dataName, setDataName] = useState(null);
     const [openMenu, setOpenMenu] = useState(false);
     const [openSettings, setOpenSettings] = useState(false);
