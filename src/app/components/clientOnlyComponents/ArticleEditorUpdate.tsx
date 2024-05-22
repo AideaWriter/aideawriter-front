@@ -13,7 +13,7 @@ import LinkTool from '@editorjs/link';
 const ArticleEditorUpdate = ({ dataSetting, onChildData }) => {
 
 
-    const ejInstance = useRef<EditorJS | undefined>();
+    const ejInstance = useRef<EditorJS | null>();
     // dataSetting
 
     // console.log(dataSetting );
@@ -39,7 +39,9 @@ const ArticleEditorUpdate = ({ dataSetting, onChildData }) => {
         const editor = new EditorJS({
             holder: 'editorjs',
             onReady: () => {
-                ejInstance.current = editor;
+                if (ejInstance.current !== undefined){
+                    ejInstance.current = editor;
+                }
             },
             autofocus: true,
             data: dataSetting.text,
