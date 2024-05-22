@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const Settings = () =>{
 
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState<any | null>({})
     const [isSettingClose, setIsSettingClose] = useState(true)
     // const [subscription, setSubscription] = useState()
 
