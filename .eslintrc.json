@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off", // Отключает правило для неиспользуемых переменных
+    "@typescript-eslint/no-explicit-any": "off", // Отключает правило для использования типа any
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Отключает требование явно указывать типы функций
+    "@typescript-eslint/ban-ts-comment": "off", // Отключает запрет на использование комментариев @ts-ignore
+    "react/prop-types": "off" // Отключает проверку prop-types для компонентов React
+  }
 }
