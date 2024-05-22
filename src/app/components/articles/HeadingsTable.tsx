@@ -1,4 +1,13 @@
-const HeadingsTable = ({
+import React from 'react';
+
+interface HeadingsTableProps {
+    theme?: string;
+    title?: string;
+    project?: string;
+    words?: string;  // Сделать необязательным
+    deleteItem?: string;
+}
+const HeadingsTable: React.FC<HeadingsTableProps> = ({
                            theme,
                            title,
                            project,
