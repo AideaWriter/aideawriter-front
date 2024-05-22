@@ -96,8 +96,8 @@ const ProjectsList = ({ data }) => {
         getProjectsLength()
         getProjects();
 
-        if(dataUpdate !== undefined && dataUpdate?.uid === popUpUpdate){
-            setPopUpUpdate(null)
+        if(dataUpdate !== undefined ){
+            if (dataUpdate.uid === popUpUpdate) setPopUpUpdate(null)
         }
     }, [page, take, reloadTrigger, data, dataUpdate])
 
