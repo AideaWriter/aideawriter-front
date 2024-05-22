@@ -15,9 +15,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} /> 30 days history</li>
-                        <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
                     </ul>
 
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
@@ -30,9 +30,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} /> 30 days history</li>
-                        <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
                     </ul>
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
                 </li>
@@ -43,9 +43,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} /> 30 days history</li>
-                        <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
                     </ul>
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
                 </li>

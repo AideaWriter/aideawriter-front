@@ -15,10 +15,10 @@ const SectionDescription = () => {
                     <h2 className={`site-section-description-text-title`}>Full-length article drafts gives you a solid base for writing.</h2>
                     <p className={`site-section-description-text-paragraph`}>With an AI text generator, businesses can create high-quality content in a fraction of the time it would take to create the same content manually.</p>
                     <ul className={`site-section-description-text-list`}>
-                        <li> <Image src={CheckCircleSolid} /> The AI-generated text is always fresh and relevant.</li>
-                        <li> <Image src={CheckCircleSolid} /> The AI-generated text is guaranteed to be unique and original.</li>
-                        <li> <Image src={CheckCircleSolid} /> The AI-generated text is SEO-friendly and authoritative.</li>
-                        <li> <Image src={CheckCircleSolid} /> AI text generators can help businesses create content that is more engaging and personalized to their customers&apos; needs</li>
+                        <li> <Image src={CheckCircleSolid} alt={'CheckCircleSolid'} /> The AI-generated text is always fresh and relevant.</li>
+                        <li> <Image src={CheckCircleSolid} alt={'CheckCircleSolid'} /> The AI-generated text is guaranteed to be unique and original.</li>
+                        <li> <Image src={CheckCircleSolid} alt={'CheckCircleSolid'} /> The AI-generated text is SEO-friendly and authoritative.</li>
+                        <li> <Image src={CheckCircleSolid} alt={'CheckCircleSolid'} /> AI text generators can help businesses create content that is more engaging and personalized to their customers&apos; needs</li>
                     </ul>
                 </div>
             </div>

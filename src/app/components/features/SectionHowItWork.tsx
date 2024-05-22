@@ -17,11 +17,11 @@ const SectionHowItWork = () => {
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>
                     </div>
                     <div className={'site-how-it-work-image color-bg-image-1'}>
-                        <Image src={CreateProject} />
+                        <Image src={CreateProject} alt={'CreateProject'} />
                     </div>
                 </li>
                 <li className={'site-how-it-work-item-rewert'}>
-                    <div className={'site-how-it-work-image rewert-img color-bg-image-2'}><Image src={CreateNewArticle} /></div>
+                    <div className={'site-how-it-work-image rewert-img color-bg-image-2'}><Image src={CreateNewArticle} alt={'CreateNewArticle'} /></div>
                     <div className={'site-how-it-work-text rewert-text'}>
                         <span>02</span>
                         <h3>Select a Template</h3>
@@ -36,12 +36,12 @@ const SectionHowItWork = () => {
 
                     </div>
                     <div className={'site-how-it-work-image color-bg-image-3'}>
-                        <Image src={SelectProject} />
+                        < Image src={SelectProject} alt={'SelectProject'} />
                     </div>
                 </li>
                 <li className={'site-how-it-work-item-rewert'}>
                     <div className={'site-how-it-work-image rewert-img color-bg-image-4'}>
-                        <Image src={SiteSectionHeaderImage} />
+                        <Image src={SiteSectionHeaderImage} alt={'SiteSectionHeaderImage'} />
                     </div>
                     <div className={'site-how-it-work-text rewert-text'}>
                         <span>04</span>

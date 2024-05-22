@@ -13,7 +13,7 @@ const SectionFeature = () => {
             <p className={`site-section-description-paragraph`}>Copygen.ai allows you to create multiple pieces of content quickly and efficiently, increasing your productivity and freeing up time to focus on other important tasks.</p>
             <ul className={'site-section-feature-list'}>
                 <li>
-                    <Image src={ContentOutput} />
+                    <Image src={ContentOutput} alt={'ContentOutput'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
@@ -21,7 +21,7 @@ const SectionFeature = () => {
 
                 </li>
                 <li>
-                    <Image src={Converts} />
+                    <Image src={Converts} alt={'Converts'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
@@ -29,7 +29,7 @@ const SectionFeature = () => {
 
                 </li>
                 <li>
-                    <Image src={Globe} />
+                    <Image src={Globe} alt={'Globe'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
@@ -37,7 +37,7 @@ const SectionFeature = () => {
 
                 </li>
                 <li>
-                    <Image src={Ideas} />
+                    <Image src={Ideas} alt={'Ideas'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
@@ -45,7 +45,7 @@ const SectionFeature = () => {
 
                 </li>
                 <li>
-                    <Image src={Ideas2} />
+                    <Image src={Ideas2} alt={'Ideas2'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
@@ -53,7 +53,7 @@ const SectionFeature = () => {
 
                 </li>
                 <li>
-                    <Image src={Build} />
+                    <Image src={Build} alt={'Build'} />
                     <div>
                         <h3>Write copy & content that converts</h3>
                         <p>You can generate high-quality content in seconds, saving you valuable time that you can spend on other important tasks.</p>
