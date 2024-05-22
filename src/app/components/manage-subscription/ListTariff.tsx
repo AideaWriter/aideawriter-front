@@ -6,6 +6,11 @@ import {useEffect, useState} from 'react';
 import {useRouter} from 'next/navigation';
 import axios from 'axios';
 
+interface User {
+    billing_status: string;
+    // добавьте другие свойства, если они существуют
+}
+
 const ListTariff = () => {
 
 
@@ -13,7 +18,7 @@ const ListTariff = () => {
     const [priceProPlus, setPriceProPlus] = useState(process.env.NEXT_PUBLIC_PRICE_ID_PRO_PLUS)
     const [ textButtonPro, setTextButtonPro ] = useState("Upgrade")
     const [ textButtonProPlus, setTextButtonProPlus ] = useState("Upgrade")
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState<User>()
     const { push } = useRouter()
 
 
