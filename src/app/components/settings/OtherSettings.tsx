@@ -54,7 +54,7 @@ const OtherSettings = ({ status }) =>{
                     <span className={'title-auto-renew'}>Subscription Auto-Renew</span>
                     <label className="switch">
                         <input onClick={handleCheckbox} type="checkbox" checked={checkboxBool} />
-                        <span class="slider round"></span>
+                        <span className="slider round"></span>
                     </label>
                 </li>
                 <li>
