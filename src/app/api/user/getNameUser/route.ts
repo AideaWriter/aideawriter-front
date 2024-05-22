@@ -25,7 +25,6 @@ export async function GET(){
         }
         const {value} = token
         const decoded = jwtDecode<JwtPayload>(value, secret as any);
-        // console.log(value);
         const response = {
             decoded
         };

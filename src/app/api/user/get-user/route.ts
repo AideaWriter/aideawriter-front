@@ -12,7 +12,7 @@ export async function GET(){
     const cookieStore = cookies();
     const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
     const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
-    // console.log(token);
+
     try {
         if (!token) {
             return NextResponse.json(
