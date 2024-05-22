@@ -74,9 +74,9 @@ const ListTariff = () => {
             <span>Free forever</span>
             <div className={'line-decoration'}></div>
             <ul>
-                <li><Image src={CheckCircle} /> 30 days history</li>
-                <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
             {
                 user.billing_status === "Pro" || user.billing_status === "Pro +" ? "" : <button>Current plan</button>
@@ -90,9 +90,9 @@ const ListTariff = () => {
             <span>Free forever</span>
             <div className={'line-decoration'}></div>
             <ul>
-                <li><Image src={CheckCircle} /> 30 days history</li>
-                <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
             <button onClick={handlerCreateSubSessionPro}>{user.billing_status === "Pro" ? "Current plan" : "Upgrade"}</button>
         </div>
@@ -103,9 +103,9 @@ const ListTariff = () => {
             <span>Free forever</span>
             <div className={'line-decoration'}></div>
             <ul>
-                <li><Image src={CheckCircle} /> 30 days history</li>
-                <li><Image src={CheckCircle} /> Up to 1000 messages/mo</li>
-                <li><Image src={CheckCircle} /> Limited AI capabilities</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
+                <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
             <button onClick={handlerCreateSubSessionProPlus}>{user.billing_status === "Pro +" ? "Current plan" : "Upgrade"}</button>
         </div>

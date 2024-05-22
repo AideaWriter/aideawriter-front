@@ -54,7 +54,7 @@ const NavLink = () => {
                     };
                    return <li key={i} className={"nav-li"} style={activeStyle}>
                         <Link   href={item.link}>
-                            <Image src={item.icon} alt=""/>
+                            <Image src={item.icon} alt={`${item.icon}`}/>
                             {item.name}
                         </Link>
                     </li>
