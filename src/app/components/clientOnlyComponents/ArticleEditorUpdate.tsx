@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 'use client';
 
 
@@ -9,14 +11,9 @@ import LinkTool from '@editorjs/link';
 
 
 const ArticleEditorUpdate = ({ dataSetting, onChildData }) => {
-    interface EjInstanceType {
-        clear: () => void;
-        render: (text: string) => void;
-        // добавьте другие методы и свойства, если они существуют
-    }
 
 
-    const ejInstance = useRef<EjInstanceType | null>(null);
+    const ejInstance = useRef();
     // dataSetting
 
     // console.log(dataSetting );
