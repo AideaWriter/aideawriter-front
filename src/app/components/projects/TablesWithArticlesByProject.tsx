@@ -11,7 +11,7 @@ interface TablesWithArticlesByProjectProps {
 
 const TablesWithArticlesByProject: React.FC<TablesWithArticlesByProjectProps> = ({ projectId }) => {
 
-const [nameProject, setNameProject] = useState({})
+const [nameProject, setNameProject] = useState<any | null>({})
 
     useEffect(() => {
         const getProject = async () => {
