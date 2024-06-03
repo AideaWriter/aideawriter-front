@@ -10,8 +10,8 @@ export async function DELETE (){
         email: string;
     }
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
 
     try {
         if (!token) {
@@ -29,13 +29,13 @@ export async function DELETE (){
         const decoded = jwtDecode<JwtPayload>(value, secret as any);
 
 
-        const result = axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`, {
+        const result = axios.delete(`${process.env.API_URL}/api/users/${decoded.uid}`, {
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${token.value}`
             }
         })
-        cookieStore.delete(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`)
+        cookieStore.delete(`${process.env.COOKIE_NAME}`)
         return new Response(JSON.stringify({ success: true}), {
             status: 200,
         });

@@ -10,8 +10,8 @@ export async function GET(){
         email: string;
     }
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
 
     try {
         if (!token) {
@@ -27,7 +27,7 @@ export async function GET(){
         const {value} = token
         const decoded = jwtDecode<JwtPayload>(value, secret as any);
 
-        const req = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`)
+        const req = await axios.get(`${process.env.API_URL}/api/users/${decoded.uid}`)
         const { data } = await req
             // if (data.type !== "Right"){
             //     return NextResponse.json(

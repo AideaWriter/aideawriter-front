@@ -12,8 +12,8 @@ export async function POST(request: Request){
         email: string;
     }
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     const body = await request.json();
     try {
         if (!token) {
@@ -34,8 +34,8 @@ export async function POST(request: Request){
             cancel_at_period_end
         } = body
 
-        console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/${decoded.uid}/cancel-at-period-end`);
-        const result = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/${decoded.uid}/cancel-at-period-end`,
+
+        const result = await axios.post(`${process.env.API_URL}/api/stripe/${decoded.uid}/cancel-at-period-end`,
             {
                 cancel_at_period_end
             },

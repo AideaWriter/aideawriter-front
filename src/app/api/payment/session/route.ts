@@ -11,8 +11,8 @@ export async function POST(request: Request){
     }
 
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
 
     const body = await request.json()
     const {
@@ -37,7 +37,7 @@ export async function POST(request: Request){
 
 
 
-        const req = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/${decoded.uid}/create-checkout-session`, {
+        const req = await axios.post(`${process.env.API_URL}/api/stripe/${decoded.uid}/create-checkout-session`, {
             price_id,
             success_url,
             cancel_url,

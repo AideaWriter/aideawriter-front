@@ -10,8 +10,8 @@ export async function POST(request: Request){
         email: string;
     }
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     try {
         if (!token) {
             return NextResponse.json(
@@ -35,7 +35,7 @@ export async function POST(request: Request){
 
 
 
-        const req = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, dataProject, {
+        const req = await axios.post(`${process.env.API_URL}/api/projects`, dataProject, {
             headers: {
                 'Authorization': `Bearer ${token.value}`
             }

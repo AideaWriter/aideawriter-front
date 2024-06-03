@@ -5,7 +5,7 @@ import axios from 'axios';
 export async function GET(request: Request){
 
     const cookieStore = cookies();
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     const url = new URL(request.url);
     const uid = url.searchParams.get('uid');
 
@@ -22,7 +22,7 @@ export async function GET(request: Request){
         }
 
         const {value} = token
-        const req = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/articles/${uid}`, {
+        const req = await axios.get(`${process.env.API_URL}/api/articles/${uid}`, {
             headers: {
                 'Authorization': `Bearer ${value}`
             }

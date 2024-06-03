@@ -11,8 +11,8 @@ export async function PATCH(request: Request) {
         email: string;
     }
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
 
     try {
         if (!token) {
@@ -31,9 +31,9 @@ export async function PATCH(request: Request) {
         const body = await request.json();
 
 
-        // console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`);
+        // console.log(`${process.env.API_URL}/api/users/${decoded.uid}`);
 
-        const req = await axios.patch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`, body, {
+        const req = await axios.patch(`${process.env.API_URL}/api/users/${decoded.uid}`, body, {
             headers: {
                 "Content-Type": "application/json"
             }

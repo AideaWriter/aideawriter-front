@@ -8,7 +8,7 @@ export async function POST(request: Request) {
 
     const { email, password } = body;
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+    const res = await fetch(`${process.env.API_URL}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({
             email,
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
     // Always check this
 
 
-    const seralized = serialize(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`, user.token, {
+    const seralized = serialize(`${process.env.COOKIE_NAME}`, user.token, {
         httpOnly: true,
         secure: true,
         sameSite: "strict",

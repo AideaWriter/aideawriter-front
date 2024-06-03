@@ -11,8 +11,8 @@ export async function GET(){
     }
 
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     // const url = new URL(request.url);
     // const page = url.searchParams.get('page');
     // const take = url.searchParams.get('take');
@@ -30,7 +30,7 @@ export async function GET(){
         const {value} = token
         const decoded = jwtDecode<JwtPayload>(value, secret as any);
 
-        const req = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/${decoded.uid}/get-list-invoices`, {
+        const req = await axios.get(`${process.env.API_URL}/api/stripe/${decoded.uid}/get-list-invoices`, {
             headers: {
                 'Authorization': `Bearer ${token.value}`
             }

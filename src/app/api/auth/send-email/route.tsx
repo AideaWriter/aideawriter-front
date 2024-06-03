@@ -12,8 +12,8 @@ export async function POST(request: Request){
     }
 
     const cookieStore = cookies();
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const secret = process.env.AUTH_SECRET || "";
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     try {
 
         if (!token) {
@@ -34,7 +34,7 @@ export async function POST(request: Request){
 
 
 
-        const req = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/forgot-password`, {email})
+        const req = await axios.post(`${process.env.API_URL}/api/auth/forgot-password`, {email})
         const { data } = await req
 
         // if (data.type !== "Right"){

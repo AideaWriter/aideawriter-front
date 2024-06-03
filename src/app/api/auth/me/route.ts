@@ -5,7 +5,7 @@ import {NextResponse} from 'next/server';
 export async function GET() {
     const cookieStore = cookies();
 
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     if (!token) {
         return NextResponse.json(
             {
@@ -20,7 +20,7 @@ export async function GET() {
     const { value } = token;
 
     // Always check this
-    const secret = process.env.NEXT_PUBLIC_AUTH_SECRET || "";
+    const secret = process.env.AUTH_SECRET || "";
 
     try {
         verify(value, secret);

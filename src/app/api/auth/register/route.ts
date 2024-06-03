@@ -6,7 +6,7 @@ export async function POST(request: Request){
         const {name, email, password} = data
         console.log(name, email, password);
 
-        let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`,{
+        let res = await fetch(`${process.env.API_URL}/api/auth/register`,{
             method: 'POST',
             body: JSON.stringify({
                 name,

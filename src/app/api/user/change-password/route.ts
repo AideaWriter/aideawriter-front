@@ -17,9 +17,9 @@ export async function PATCH(request: Request) {
 
 
 
-        // console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`);
+        // console.log(`${process.env.API_URL}/api/users/${decoded.uid}`);
 
-        const req = await axios.patch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${decoded.uid}`, {password}, {
+        const req = await axios.patch(`${process.env.API_URL}/api/users/${decoded.uid}`, {password}, {
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${token}`

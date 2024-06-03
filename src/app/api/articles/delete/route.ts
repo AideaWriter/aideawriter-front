@@ -4,7 +4,7 @@ import {NextResponse} from 'next/server';
 
 export async function DELETE (request: Request){
     const cookieStore = cookies();
-    const token = cookieStore.get(`${process.env.NEXT_PUBLIC_COOKIE_NAME}`);
+    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
     const body = await request.json();
 
     try {
@@ -21,8 +21,8 @@ export async function DELETE (request: Request){
 
         const {value} = token
         const { uid } = body
-        console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/articles/${uid}`);
-        const result = axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/articles/${uid}`, {
+        console.log(`${process.env.API_URL}/api/articles/${uid}`);
+        const result = axios.delete(`${process.env.API_URL}/api/articles/${uid}`, {
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${value}`
