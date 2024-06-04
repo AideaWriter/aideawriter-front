@@ -4,8 +4,11 @@ import {NextResponse} from 'next/server';
 
 
 export async function PATCH(request: Request) {
+    const apiUrl = process.env.API_URL;
+    const cookieName = process.env.COOKIE_NAME;
+
     const cookieStore = cookies();
-    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
+    const token = cookieStore.get(`${cookieName}`);
     const body = await request.json();
 
     try {
@@ -22,7 +25,7 @@ export async function PATCH(request: Request) {
 
         const {value} = token
        const { uid, name } = body
-        const req = await axios.patch(`${process.env.API_URL}/api/projects/${uid}`, {
+        const req = await axios.patch(`${apiUrl}/api/projects/${uid}`, {
             name,
         }, {
             headers: {

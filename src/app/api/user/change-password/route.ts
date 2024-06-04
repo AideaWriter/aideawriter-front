@@ -4,6 +4,9 @@ import {NextResponse} from 'next/server';
 
 
 export async function PATCH(request: Request) {
+
+    const apiUrl = process.env.API_URL;
+
     interface JwtPayload {
         uid: string;
         name?: string;
@@ -19,7 +22,7 @@ export async function PATCH(request: Request) {
 
         // console.log(`${process.env.API_URL}/api/users/${decoded.uid}`);
 
-        const req = await axios.patch(`${process.env.API_URL}/api/users/${decoded.uid}`, {password}, {
+        const req = await axios.patch(`${apiUrl}/api/users/${decoded.uid}`, {password}, {
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${token}`

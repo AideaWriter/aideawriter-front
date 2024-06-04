@@ -3,9 +3,12 @@ import {cookies} from 'next/headers';
 import {NextResponse} from 'next/server';
 
 export async function GET() {
+
+    const cookieName = process.env.COOKIE_NAME;
+
     const cookieStore = cookies();
 
-    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
+    const token = cookieStore.get(`${cookieName}`);
     if (!token) {
         return NextResponse.json(
             {

@@ -5,6 +5,8 @@ import {jwtDecode} from 'jwt-decode';
 
 
 export async function POST(request: Request){
+    const apiUrl = process.env.API_URL;
+    const cookieName = process.env.COOKIE_NAME;
 
     interface JwtPayload {
         uid: string;
@@ -13,7 +15,7 @@ export async function POST(request: Request){
     }
     const cookieStore = cookies();
     const secret = process.env.AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
+    const token = cookieStore.get(`${cookieName}`);
     const body = await request.json();
     try {
         if (!token) {
@@ -35,7 +37,7 @@ export async function POST(request: Request){
         } = body
 
 
-        const result = await axios.post(`${process.env.API_URL}/api/stripe/${decoded.uid}/cancel-at-period-end`,
+        const result = await axios.post(`${apiUrl}/api/stripe/${decoded.uid}/cancel-at-period-end`,
             {
                 cancel_at_period_end
             },

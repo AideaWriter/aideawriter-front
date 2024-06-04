@@ -3,8 +3,11 @@ import {NextResponse} from 'next/server';
 import axios from 'axios';
 
 export async function GET(request: Request){
+    const apiUrl = process.env.API_URL;
+    const cookieName = process.env.COOKIE_NAME;
+
     const cookieStore = cookies();
-    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
+    const token = cookieStore.get(`${cookieName}`);
     const url = new URL(request.url);
     const uid = url.searchParams.get('uid');
     try {
@@ -20,7 +23,7 @@ export async function GET(request: Request){
         }
 
         const {value} = token
-        const req = await axios.get(`${process.env.API_URL}/api/projects/${uid}`, {
+        const req = await axios.get(`${apiUrl}/api/projects/${uid}`, {
             headers: {
                 'Authorization': `Bearer ${value}`
             }

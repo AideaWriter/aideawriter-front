@@ -2,9 +2,10 @@ import {cookies} from 'next/headers';
 import {NextResponse} from 'next/server';
 
 export async function POST(){
+    const cookieName = process.env.COOKIE_NAME;
     try {
         const cookieStore = cookies();
-        cookieStore.delete(`${process.env.COOKIE_NAME}`)
+        cookieStore.delete(`${cookieName}`)
         return new Response(JSON.stringify({message: 'User Log Out'}), {
             status: 200,
         });

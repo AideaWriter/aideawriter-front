@@ -4,7 +4,8 @@ import {jwtDecode} from 'jwt-decode';
 import axios from 'axios';
 
 export async function GET(request: Request){
-
+    const apiUrl = process.env.API_URL;
+    const cookieName = process.env.COOKIE_NAME;
     interface JwtPayload {
         uid: string;
         name?: string;
@@ -13,7 +14,7 @@ export async function GET(request: Request){
 
     const cookieStore = cookies();
     const secret = process.env.AUTH_SECRET || "";
-    const token = cookieStore.get(`${process.env.COOKIE_NAME}`);
+    const token = cookieStore.get(`${cookieName}`);
     const url = new URL(request.url);
     const page = url.searchParams.get('page');
     const take = url.searchParams.get('take');
@@ -33,7 +34,7 @@ export async function GET(request: Request){
         const decoded = jwtDecode<JwtPayload>(value, secret as any);
 
 
-        const req = await axios.get(`${process.env.API_URL}/api/articles?uid=${decoded.uid}&page=${page}&take=${take}`, {
+        const req = await axios.get(`${apiUrl}/api/articles?uid=${decoded.uid}&page=${page}&take=${take}`, {
             headers: {
                 'Authorization': `Bearer ${token.value}`
             }
