@@ -4,11 +4,12 @@ import {NextResponse} from 'next/server';
 const MAX_AGE = 60 * 60 * 24 * 30; // days;
 
 export async function POST(request: Request) {
+    const apiUrl = process.env.API_URL;
     const body = await request.json();
 
     const { email, password } = body;
 
-    const res = await fetch(`${process.env.API_URL}/api/auth/login`, {
+    const res = await fetch(`${apiUrl}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({
             email,
