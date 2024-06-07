@@ -6,7 +6,8 @@ import {useContext, useEffect, useState} from 'react';
 import ProjectContext from '@/app/components/createNewArticle/ProjectContext';
 
 const EditorComponent = dynamic(
-    () => import('@/app/components/clientOnlyComponents/EditorComponent'),
+    () => import('../clientOnlyComponents/EditorComponent'),
+    { ssr: false }
 );
 
 const ArticlePanel = ({ text }) => {
