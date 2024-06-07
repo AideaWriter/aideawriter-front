@@ -17,7 +17,6 @@ const Header = () => {
 
     return <header className={'site-header'}>
         <div className={'site-container site-row-header'}>
-            {console.log("API_URL:", process.env.API_URL)}
             <Logo />
             <button onClick={handleOpenMenu} className={'site-burger-menu'}><span></span></button>
             <div className={`site-nav-link-block ${ openMenu && `site-nav-link-block-transform`}`}>
