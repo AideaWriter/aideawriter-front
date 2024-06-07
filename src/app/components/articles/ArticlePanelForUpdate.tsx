@@ -7,7 +7,6 @@ import ProjectContext from '@/app/components/createNewArticle/ProjectContext';
 
 const ArticleEditorUpdate = dynamic(
     () => import('@/app/components/clientOnlyComponents/ArticleEditorUpdate'),
-    { ssr: false }
 );
 
 const ArticlePanelForUpdate = ({ text }) => {
