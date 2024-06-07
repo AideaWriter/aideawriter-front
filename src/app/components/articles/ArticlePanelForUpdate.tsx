@@ -2,7 +2,7 @@
 
 
 import dynamic from 'next/dynamic';
-import {useContext, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import ProjectContext from '@/app/components/createNewArticle/ProjectContext';
 
 const ArticleEditorUpdate = dynamic(
@@ -10,7 +10,16 @@ const ArticleEditorUpdate = dynamic(
     { ssr: false }
 );
 
+
+
 const ArticlePanelForUpdate = ({ text }) => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        console.log('useEffect called:' + isClient);
+        setIsClient(true);
+    }, []);
+
     const data = useContext(ProjectContext);
     const [returnText, setReturnText] = useState({})
     const [textSaveButton, setTextSaveButton] = useState('Update')

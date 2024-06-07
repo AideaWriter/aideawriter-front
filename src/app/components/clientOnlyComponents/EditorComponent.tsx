@@ -9,7 +9,7 @@ import LinkTool from '@editorjs/link';
 
 
 const EditorComponent = ({ dataSetting }) => {
-    const ejInstance = useRef<EditorJS | null>();
+    const ejInstance = useRef<EditorJS | null>(null);
      // dataSetting
 
 
