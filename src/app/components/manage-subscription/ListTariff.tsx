@@ -68,9 +68,6 @@ const ListTariff = () => {
     }
 
 
-
-
-
     return <div className={'cards-tariff'}>
         <div className={'tariff-card'}>
             <h3>Free</h3>
@@ -84,7 +81,7 @@ const ListTariff = () => {
                 <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
             {
-                user.billing_status === "Pro" || user.billing_status === "Pro +" ? "" : <button>Current plan</button>
+                user?.billing_status === "trialing"  ?  <button>Current plan</button> : ""
             }
 
         </div>
@@ -99,7 +96,7 @@ const ListTariff = () => {
                 <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
                 <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
-            <button onClick={handlerCreateSubSessionPro}>{user.billing_status === "Pro" ? "Current plan" : "Upgrade"}</button>
+            <button onClick={handlerCreateSubSessionPro}>{ user?.billing_status !== "Pro +" && user?.billing_status === "Pro" ? "Current plan" : "Upgrade"}</button>
         </div>
         <div className={'tariff-card'}>
             <h3>Pro +</h3>
@@ -112,7 +109,7 @@ const ListTariff = () => {
                 <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
                 <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
             </ul>
-            <button onClick={handlerCreateSubSessionProPlus}>{user.billing_status === "Pro +" ? "Current plan" : "Upgrade"}</button>
+            <button onClick={handlerCreateSubSessionProPlus}>{user?.billing_status === "Pro +" ? "Current plan" : "Upgrade"}</button>
         </div>
     </div>
 }
