@@ -23,6 +23,7 @@ export async function POST(request: Request){
         success_url,
         cancel_url,
     } = body
+    console.log(price_id, success_url, cancel_url);
     try {
             if (!token) {
                 return NextResponse.json(

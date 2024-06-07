@@ -45,8 +45,11 @@ const ListTariff = () => {
                     })
                 }).then(response => {
                     return response.json().then(data => {
-                        push(data.url)
+                        if (data.url){
+                            push(data.url)
+                        }
                         console.log(data);
+
                     })
                 })
     }
