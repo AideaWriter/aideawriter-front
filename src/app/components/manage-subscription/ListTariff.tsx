@@ -14,8 +14,8 @@ interface User {
 const ListTariff = () => {
 
 
-    const [pricePro, setPricePro] = useState(process.env.NEXT_PUBLIC_PRICE_ID_PRO)
-    const [priceProPlus, setPriceProPlus] = useState(process.env.NEXT_PUBLIC_PRICE_ID_PRO_PLUS)
+    const [pricePro, setPricePro] = useState(process.env.PRICE_ID_PRO)
+    const [priceProPlus, setPriceProPlus] = useState(process.env.PRICE_ID_PRO_PLUS)
     const [ textButtonPro, setTextButtonPro ] = useState("Upgrade")
     const [ textButtonProPlus, setTextButtonProPlus ] = useState("Upgrade")
     const [user, setUser] = useState<User>()
