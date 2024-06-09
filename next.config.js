@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        PRICE_ID_PRO: "price_1PPe3mH0C2HpMlPZivvCgnTT",
-        PRICE_ID_PRO_PLUS: "price_1P6VpTH0C2HpMlPZ9BrS1tCL"
+        PRICE_ID_PRO: "price_1PPg2EH0C2HpMlPZtO0qgV19",
+        PRICE_ID_PRO_PLUS: "price_1PPg6aH0C2HpMlPZ32D3oFEr"
     }
 }
 
