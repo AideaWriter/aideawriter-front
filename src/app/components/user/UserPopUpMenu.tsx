@@ -18,7 +18,7 @@ const UserPopUpMenu = (
                     'Content-Type': 'application/json'
                 },
             }).then(response => {
-                push('/pages/auth/signin')
+                push('/')
             })
             // console.log(res);
             // if (res) {

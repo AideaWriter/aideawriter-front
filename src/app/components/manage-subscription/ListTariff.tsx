@@ -59,8 +59,8 @@ const ListTariff = () => {
             method: 'POST',
             body: JSON.stringify({
                 price_id: `${priceProPlus}`,
-                success_url: "http://localhost:3000/pages/success",
-                cancel_url: "http://localhost:3000/pages/cancel"
+                success_url: "https://aideawriter.app/pages/success",
+                cancel_url: "https://aideawriter.app/pages/cancel"
             })
         }).then(response => {
             return response.json().then(data => {
@@ -91,7 +91,7 @@ const ListTariff = () => {
         <div className={'tariff-card'}>
             <h3>Pro</h3>
             <h4>Basic chat functionality</h4>
-            <h2><span>$15</span>/mo</h2>
+            <h2><span>$17</span>/mo</h2>
             <span>Free forever</span>
             <div className={'line-decoration'}></div>
             <ul>
@@ -104,7 +104,7 @@ const ListTariff = () => {
         <div className={'tariff-card'}>
             <h3>Pro +</h3>
             <h4>Basic chat functionality</h4>
-            <h2><span>$20</span>/mo</h2>
+            <h2><span>$25</span>/mo</h2>
             <span>Free forever</span>
             <div className={'line-decoration'}></div>
             <ul>
