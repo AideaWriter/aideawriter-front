@@ -1,15 +1,12 @@
 import RootLayout from '@/app/layout';
+import CancelComponent from '@/app/components/cancel/CancelComponent';
 
 
 const Cancel = () => {
 
 
     return<RootLayout>
-        <section>
-            <div>
-                <p style={{color: "#fff"}}>Cancel</p>
-            </div>
-        </section>
+        <CancelComponent />
     </RootLayout>
 }
 
