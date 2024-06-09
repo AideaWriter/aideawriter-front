@@ -40,8 +40,8 @@ const ListTariff = () => {
                     method: 'POST',
                     body: JSON.stringify({
                         price_id: `${pricePro}`,
-                        success_url: "http://localhost:3000/pages/success",
-                        cancel_url: "http://localhost:3000/pages/cancel"
+                        success_url: "https://aideawriter.app/pages/success",
+                        cancel_url: "https://aideawriter.app/pages/cancel"
                     })
                 }).then(response => {
                     return response.json().then(data => {
