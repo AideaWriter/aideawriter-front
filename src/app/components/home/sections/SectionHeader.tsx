@@ -7,7 +7,7 @@ const SectionHeader= () => {
         <div className={'site-container site-section-header-row'}>
             <div className={`site-section-header-text-block`}>
                 <h3 className={'site-section-header-text'}>WELCOME TO AIDEAWRITER.AI</h3>
-                <h1 className={'site-section-header-text'}>Create amazing <span>web content</span> posts10X faster with AI.</h1>
+                <h1 className={'site-section-header-text'}>Create AI <span>web content</span> posts 10X faster</h1>
                 <p className={'site-section-header-text'}>Elegantly structured content with references in just a few clicks.</p>
                 <div className={`site-section-header-button`}>
                     <Link href={`#`} className={'site-section-header-text'}>Get Started Free</Link>

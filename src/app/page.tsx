@@ -6,6 +6,7 @@ import Footer from '@/app/components/home/Footer';
 export default function Home() {
   return (
       <RootLayout>
+
         <Header />
         <Main />
         <Footer />

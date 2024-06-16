@@ -10,7 +10,7 @@ const SectionFeatures = () => {
     return <section className={'site-section-generate-feature'}>
         <div className={'site-container'}>
             <h3 className={'site-section-generate-feature-subtitle'}>FEATURE</h3>
-            <h1 className={'site-section-generate-feature-title'}>Generate AI-powered content in 1 click.</h1>
+            <h1 className={'site-section-generate-feature-title'}>Generate AI text content in 1 click.</h1>
             <ul className={'site-section-generate-feature-row'}>
                 <li>
                     <div className={'site-section-generate-feature-image'}>
