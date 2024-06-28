@@ -45,7 +45,7 @@ const SectionHowItWork = () => {
                     </div>
                     <div className={'site-how-it-work-text rewert-text'}>
                         <span>04</span>
-                        <h3>Enter the required settings and you're done!</h3>
+                        <h3>Enter the required settings and you’re done!</h3>
                         {/*<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>*/}
 
                     </div>
