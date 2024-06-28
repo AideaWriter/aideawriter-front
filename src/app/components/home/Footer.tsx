@@ -9,7 +9,7 @@ const Footer = () => {
                     <Logo />
                     <h3>Save time. Be inspired.</h3>
                     <p>Automatically create blog articles for your business in seconds. Use the most advanced AI writer to increase your traffic and productivity.</p>
-                    <p>© 2023 CopyGenAI. Template Made By Softnio</p>
+                    <p>© 2023 AIdeaWriter.app</p>
                 </div>
                 <div className={'site-footer-menu'}>
                     <h3>Menu</h3>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <div className={'site-footer-contact-us'}>
                     <h2>Contact Us</h2>
                     <p>If you need help using our service, or have a question about it, please feel free to contact us.</p>
-                    <Link href={'mailto:support@copygen.ai'}>support@copygen.ai</Link>
+                    <Link href={'mailto:aideawriter@gmail.com'}>aideawriter@gmail.com</Link>
                 </div>
             </div>
         </div>

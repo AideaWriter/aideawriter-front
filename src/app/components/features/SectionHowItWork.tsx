@@ -14,7 +14,7 @@ const SectionHowItWork = () => {
                     <div className={'site-how-it-work-text'}>
                         <span>01</span>
                         <h3>Create a Project</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        {/*<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>*/}
                     </div>
                     <div className={'site-how-it-work-image color-bg-image-1'}>
                         <Image src={CreateProject} alt={'CreateProject'} />
@@ -24,15 +24,15 @@ const SectionHowItWork = () => {
                     <div className={'site-how-it-work-image rewert-img color-bg-image-2'}><Image src={CreateNewArticle} alt={'CreateNewArticle'} /></div>
                     <div className={'site-how-it-work-text rewert-text'}>
                         <span>02</span>
-                        <h3>Select a Template</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <h3>Go to the Create New Article tab</h3>
+                        {/*<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>*/}
                     </div>
                 </li>
                 <li className={'site-how-it-work-item'}>
                     <div className={'site-how-it-work-text'}>
                         <span>03</span>
-                        <h3>Select a Template</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <h3>Select a Project</h3>
+                        {/*<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>*/}
 
                     </div>
                     <div className={'site-how-it-work-image color-bg-image-3'}>
@@ -45,8 +45,8 @@ const SectionHowItWork = () => {
                     </div>
                     <div className={'site-how-it-work-text rewert-text'}>
                         <span>04</span>
-                        <h3>Select a Template</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <h3>Enter the required settings and you're done!</h3>
+                        {/*<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, quasi architecto beatae vitae dicta sunt explicabo.</p>*/}
 
                     </div>
                 </li>

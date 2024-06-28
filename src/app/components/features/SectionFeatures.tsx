@@ -21,9 +21,8 @@ const SectionFeatures = () => {
                 </li>
                 <li>
                     <div className={'site-section-generate-feature-image'}><Image src={ContentOutput} alt={'ContentOutput'} /></div>
-
-                    <h3>Tools and templates</h3>
-                    <p>Using our AI tools and pre-built template to create content briefs, write and optimize content in one place.</p>
+                    <h3>Easy to use</h3>
+                    <p>Use our simple AI tool quickly and easily</p>
                 </li>
                 <li>
                     <div className={'site-section-generate-feature-image'}> <Image src={Globe} alt={'Globe'} /></div>
@@ -47,7 +46,7 @@ const SectionFeatures = () => {
                     <div className={'site-section-generate-feature-image'}><Image src={Build} alt={'Build'} /></div>
 
                     <h3>Write in Any Language</h3>
-                    <p>Let AI write for you in over 40 languages. Our AI can write in English, Spanish, French and many more language.</p>
+                    <p>Let AI write for you in over 6 languages. Our AI can write in English, Spanish, French, Portuguese, Russian, German.</p>
                 </li>
             </ul>
         </div>

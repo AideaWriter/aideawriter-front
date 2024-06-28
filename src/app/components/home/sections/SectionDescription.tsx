@@ -12,7 +12,7 @@ const SectionDescription = () => {
                     <Image src={SiteSectionDescription} alt={'SiteSection Description'} />
                 </div>
                 <div className={`site-section-description-text-block`}>
-                    <h2 className={`site-section-description-text-title`}>Full-length article drafts gives you a solid base for writing.</h2>
+                    <h2 className={`site-section-description-text-title`}>Unleash the full potential of AI to create the best content you need in just few clicks</h2>
                     <p className={`site-section-description-text-paragraph`}>With an AI text generator, businesses can create high-quality content in a fraction of the time it would take to create the same content manually.</p>
                     <ul className={`site-section-description-text-list`}>
                         <li> <Image src={CheckCircleSolid} alt={'CheckCircleSolid'} /> The AI-generated text is always fresh and relevant.</li>

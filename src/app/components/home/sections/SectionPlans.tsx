@@ -15,9 +15,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />5 Articles</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />Unlimited projects</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />GPT-4</li>
                     </ul>
 
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
@@ -30,9 +30,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />10 Articles</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />Unlimited projects</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />GPT-4</li>
                     </ul>
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
                 </li>
@@ -43,9 +43,9 @@ const SectionPlans = () => {
                     <span>Free forever</span>
                     <div className={'line-decoration'}></div>
                     <ul>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> 30 days history</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Up to 1000 messages/mo</li>
-                        <li><Image src={CheckCircle} alt={'CheckCircle'} /> Limited AI capabilities</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />20 Articles</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />Unlimited projects</li>
+                        <li><Image src={CheckCircle} alt={'CheckCircle'} />GPT-4</li>
                     </ul>
                     <Link href={`/pages/auth/signup`}>Start Free Trial</Link>
                 </li>
